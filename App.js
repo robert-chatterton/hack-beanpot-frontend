@@ -3,14 +3,13 @@ import React from 'react';
 import { Dimensions, StyleSheet, Text, View, Image, Button, SafeAreaView } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import Center from 'react-center';
 import Header from './components/Header';
 
 // Home page for the WebApp
 function HomeScreen( {navigation} ) {
   return(
     <SafeAreaView style={styles.container}>
-      <Header />
         <Button
           color= '#A62F24'
           title= "search"
@@ -24,12 +23,11 @@ function HomeScreen( {navigation} ) {
 function LocatorScreen( {navigation} ) {
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
-      <Button
-        color = '#A62F24'
-        title = "go back"
-        onPress = {() => navigation.navigate('Home Page')}
-      />
+        <Button
+          color = '#A62F24'
+          title = "go back"
+          onPress = {() => navigation.navigate('Home Page')}
+        />
     </SafeAreaView>
   );
 }
@@ -44,16 +42,12 @@ export default function App() {
         <Stack.Screen
           name = "Home Page"
           component = {HomeScreen}
-          options = {{
-            headerShown: false
-          }}
+          options = {navBarOptions}
           />
         <Stack.Screen
         name = "Map Page"
         component={LocatorScreen}
-        options = {{
-          headerShown: false
-        }}
+        options = {navBarOptions}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -67,4 +61,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  screenLayout: {
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
+
+const navBarOptions = {
+  headerTitleAlign: 'center',
+  headerStyle: {
+    backgroundColor: '#3B452D'
+  },
+  headerTintColor: '#DFB37D',
+  headerTitleStyle: {
+      fontSize: 30,
+      fontWeight: 600
+  },
+};

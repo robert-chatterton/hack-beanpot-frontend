@@ -7,13 +7,9 @@ import styles from './styles';
 
 const Header = () => {
     return (
-        <View style={styles.topBar}>
           <View style={styles.topBarContainer}>
-            <View style={styles.titles}>
               <Text style={styles.title}>App Title</Text>
-            </View>
           </View>
-        </View>
     );
 };
 
