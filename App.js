@@ -6,30 +6,40 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Header from './components/Header';
 
-import Locater from './Locater';
-import { render } from 'react-dom';
-
 // Home page for the webapp
-export default function App() {
-  console.log(Dimensions.get('window'));
-  return (
+function HomeScreen({navigation}) {
+  return(
     <SafeAreaView style={styles.container}>
       <Header />
+      <Button
+        title="Search"
+        onPress={() => navigation.navigate('Locator')}
+      />
     </SafeAreaView>
   );
 }
 
-goToLocater 
-
-render() {
+// Screen for after a search happens
+function LocatorScreen() {
   return (
-    <View style={styles.container}>
-      <Text> Hello </Text>
-      <Button
-        onPress={}
-        title="Search"
-      />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Header />
+      <Text>WELCOME TO MY HOOD</Text> 
+    </SafeAreaView>
+  );
+}
+
+const Stack = createStackNavigator();
+
+// Acting like a main function
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name = "Home" component={HomeScreen} />
+        <Stack.Screen name = "Locator" component={LocatorScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
@@ -40,14 +50,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
-
-// For navigation through different screens
-export default StackNavigator({
-  Home: {
-    screen: App
-  },
-  Locater: {
-    screen: Locater
-  }
 });
