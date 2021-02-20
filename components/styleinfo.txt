@@ -4,3 +4,4 @@ Colors:
   - gray  : #5A5E5F
   - brown : #372618
   - red   : #A62F24
+  - dark green : #3B452D
