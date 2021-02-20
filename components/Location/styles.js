@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     },
     textLocation: {
       marginTop: 160,
+      paddingBottom: 10,
       color: "#DFB37D",
       textAlign: "center",
       fontSize: 20,
@@ -23,6 +24,9 @@ const styles = StyleSheet.create({
         textAlign: "center",
         fontSize: 16,
         fontWeight: "300"
+    },
+    buttonStyle: {
+        marginTop: 20
     },
     textRange: {
         marginTop: 100,
