@@ -6,16 +6,8 @@ export default function App() {
   console.log(Dimensions.get('window'));
 
   return (
-
     <SafeAreaView style={styles.container}>
       <Header />
-      <View style={{
-        backgroundColor: 'red',
-        width: '100%',
-        height: '30%'
-      }}>
-
-      </View>
     </SafeAreaView>
   );
 }
@@ -23,7 +15,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'orange',
+    backgroundColor: '#4D593B',
     alignItems: 'center',
     justifyContent: 'center',
   },

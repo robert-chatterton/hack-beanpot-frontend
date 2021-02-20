@@ -1,0 +1,6 @@
+Colors:
+  - green : #4D593B
+  - beige : #DFB37D
+  - gray  : #5A5E5F
+  - brown : #372618
+  - red   : #A62F24

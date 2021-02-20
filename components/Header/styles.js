@@ -12,8 +12,10 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     title: {
+        // font: 'Comic Sans'
+        color: '#DFB37D',
         fontSize: 40,
-        fontWeight: 600
+        fontWeight: 700
     }
 });
 
