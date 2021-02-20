@@ -6,25 +6,30 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Header from './components/Header';
 
-// Home page for the webapp
-function HomeScreen({navigation}) {
+// Home page for the WebApp
+function HomeScreen( {navigation} ) {
   return(
     <SafeAreaView style={styles.container}>
       <Header />
-      <Button
-        title="Search"
-        onPress={() => navigation.navigate('Locator')}
-      />
+        <Button
+          color= '#A62F24'
+          title= "search"
+          onPress= {() => navigation.navigate('Map Page')}
+        />
     </SafeAreaView>
   );
 }
 
 // Screen for after a search happens
-function LocatorScreen() {
+function LocatorScreen( {navigation} ) {
   return (
     <SafeAreaView style={styles.container}>
       <Header />
-      <Text>WELCOME TO MY HOOD</Text> 
+      <Button
+        color = '#A62F24'
+        title = "go back"
+        onPress = {() => navigation.navigate('Home Page')}
+      />
     </SafeAreaView>
   );
 }
@@ -36,8 +41,20 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name = "Home" component={HomeScreen} />
-        <Stack.Screen name = "Locator" component={LocatorScreen} />
+        <Stack.Screen
+          name = "Home Page"
+          component = {HomeScreen}
+          options = {{
+            headerShown: false
+          }}
+          />
+        <Stack.Screen
+        name = "Map Page"
+        component={LocatorScreen}
+        options = {{
+          headerShown: false
+        }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

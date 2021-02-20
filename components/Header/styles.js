@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     },
     titles: {
         marginTop: '5%',
-        height: '40%',
+        height: '20%',
         width: '100%',
         alignItems: 'center'
     },
