@@ -13,7 +13,9 @@ export default function App() {
         backgroundColor: 'red',
         width: '100%',
         height: '30%'
-      }}></View>
+      }}>
+
+      </View>
     </SafeAreaView>
   );
 }
