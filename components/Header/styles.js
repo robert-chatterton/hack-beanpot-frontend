@@ -1,3 +1,4 @@
+// Styles to be used for the Header
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
