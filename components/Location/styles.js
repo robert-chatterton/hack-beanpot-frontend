@@ -5,7 +5,14 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       width: '100',
-      heihgt: '100'
+      height: '100'
+    },
+    titleStyle: {
+      marginBottom: 30,
+      color: "#DFB37D",
+      textAlign: "center",
+      fontSize: 40,
+      fontWeight: "600"
     },
     textLocation: {
       marginTop: 160,
@@ -16,7 +23,7 @@ const styles = StyleSheet.create({
       fontWeight: "600"
     },
     textReader: {
-        marginTop: 40,
+        marginTop: 10,
         height: 40,
         borderColor: "#DFB37D",
         borderWidth: 3,
@@ -30,13 +37,14 @@ const styles = StyleSheet.create({
     },
     textRange: {
         marginTop: 100,
+        marginBottom: 30,
         color: "#DFB37D",
         textAlign: "center",
         fontSize: 20,
         fontWeight: "600"
     },
     sliderStyle: {
-        marginBottom: 10,
+        marginBottom: 30,
         width: '80',
     },
     sliderCount: {

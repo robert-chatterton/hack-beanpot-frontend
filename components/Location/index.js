@@ -7,27 +7,32 @@ import Geocode from "react-geocode";
 import styles from './styles';
 
 // api key for geolocations: AIzaSyCX3tnZh3CzM1jDM7MQST5GAqkhfiGvJmc
-Geocode.setApiKey("AIzaSyCX3tnZh3CzM1jDM7MQST5GAqkhfiGvJmc");
-Geocode.setLocationType("ROOFTOP");
+// Geocode.setApiKey("AIzaSyCX3tnZh3CzM1jDM7MQST5GAqkhfiGvJmc");
+// Geocode.setLocationType("ROOFTOP");
 
 const Location = () => {
 
     // To be returned to the back end for use.
     const [sliderValue, setSliderValue] = useState(125);
-    const [text, setText] = useState("Enter Address Here!");
+    const [text, setText] = useState("");
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.textLocation}> Provide a location in which to search for nearby National Parks </Text>
+        <View>
+            <Text style={styles.titleStyle}>
+              National Park Search
+            </Text>
+            <Text style={styles.textRange}>
+              Where would you like to search from?
+            </Text>
             <TextInput style={styles.textReader}
-                defaultValue= {text}
+                defaultValue={text}
+                placeholder="Enter address here"
                 onChangeText={text => setText(text)}
             />
-            <Button style={styles.buttonStyle}
-                color= '#A62F24'
-                title= 'Save'
-            />
-            <Text style={styles.textRange}> How many miles would you like to search for? </Text>
+
+            <Text style={styles.textRange}>
+              How many miles away would you like to search for?
+            </Text>
             <Slider style={styles.sliderStyle}
                 minimumValue={1}
                 maximumValue={250}
@@ -35,13 +40,13 @@ const Location = () => {
                 onValueChange={
                     (sliderValue) => setSliderValue(sliderValue)
                 }
-                minimumTrackTintColor="#FFFFFF"
+                minimumTrackTintColor="#DFB37D"
                 maximumTrackTintColor="#3B452D"
                 thumbTintColor="#A62F24"
                 step='1'
             />
             <Text style={styles.sliderCount}>
-                {sliderValue} miles
+                {sliderValue} miles away
             </Text>
         </View>
     );
