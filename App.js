@@ -4,17 +4,20 @@ import { Dimensions, StyleSheet, Text, View, Image, Button, SafeAreaView } from 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Center from 'react-center';
+
+import Location from './components/Location'
 // import MapView from 'react-native-maps';
 
 // Home page for the WebApp
 function HomeScreen( {navigation} ) {
   return(
     <SafeAreaView style={styles.container}>
-        <Button
-          color= '#A62F24'
-          title= "search"
-          onPress= {() => navigation.navigate('Map Page')}
-        />
+      <Location />
+      <Button
+        color= '#A62F24'
+        title= "search"
+        onPress= {() => navigation.navigate('Map Page')}
+      />
     </SafeAreaView>
   );
 }
