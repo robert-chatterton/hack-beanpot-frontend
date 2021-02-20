@@ -4,7 +4,7 @@ import { Dimensions, StyleSheet, Text, View, Image, Button, SafeAreaView } from 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Center from 'react-center';
-import Header from './components/Header';
+// import MapView from 'react-native-maps';
 
 // Home page for the WebApp
 function HomeScreen( {navigation} ) {
@@ -23,11 +23,7 @@ function HomeScreen( {navigation} ) {
 function LocatorScreen( {navigation} ) {
   return (
     <SafeAreaView style={styles.container}>
-        <Button
-          color = '#A62F24'
-          title = "go back"
-          onPress = {() => navigation.navigate('Home Page')}
-        />
+
     </SafeAreaView>
   );
 }
@@ -68,6 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
 
 const navBarOptions = {
   headerTitleAlign: 'center',
