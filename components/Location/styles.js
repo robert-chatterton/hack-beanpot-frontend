@@ -14,6 +14,16 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: "600"
     },
+    textReader: {
+        marginTop: 40,
+        height: 40,
+        borderColor: "#DFB37D",
+        borderWidth: 3,
+        color: "#DFB37D",
+        textAlign: "center",
+        fontSize: 16,
+        fontWeight: "300"
+    },
     textRange: {
         marginTop: 100,
         color: "#DFB37D",
@@ -22,11 +32,15 @@ const styles = StyleSheet.create({
         fontWeight: "600"
     },
     sliderStyle: {
-        marginBottom: 200,
+        marginBottom: 10,
         width: '80',
     },
-    checboxStyle: {
-
+    sliderCount: {
+        marginBottom: 100,
+        color: "#DFB37D",
+        textAlign: "center",
+        fontSize: 20,
+        fontWeight: "600"
     }
   });
 
