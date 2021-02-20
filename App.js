@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
   },
 });
 
-
 const navBarOptions = {
   headerTitleAlign: 'center',
   headerStyle: {
