@@ -10,6 +10,9 @@ import styles from './styles';
 // Geocode.setApiKey("AIzaSyCX3tnZh3CzM1jDM7MQST5GAqkhfiGvJmc");
 // Geocode.setLocationType("ROOFTOP");
 
+var address;
+var mileRange;
+
 const Location = () => {
 
     // To be returned to the back end for use.
@@ -37,9 +40,7 @@ const Location = () => {
                 minimumValue={1}
                 maximumValue={250}
                 value={sliderValue}
-                onValueChange={
-                    (sliderValue) => setSliderValue(sliderValue)
-                }
+                onValueChange={(sliderValue) => setSliderValue(sliderValue)}
                 minimumTrackTintColor="#DFB37D"
                 maximumTrackTintColor="#3B452D"
                 thumbTintColor="#A62F24"
@@ -48,6 +49,7 @@ const Location = () => {
             <Text style={styles.sliderCount}>
                 {sliderValue} miles away
             </Text>
+
         </View>
     );
 };
