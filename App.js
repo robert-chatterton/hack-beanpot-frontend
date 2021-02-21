@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Center from 'react-center';
 
 import Location from './components/Location'
+import List from './components/List'
 // import MapView from 'react-native-maps';
 
 // Home page for the WebApp
@@ -26,7 +27,7 @@ function HomeScreen( {navigation} ) {
 function LocatorScreen( {navigation} ) {
   return (
     <SafeAreaView style={styles.container}>
-
+      <List />
     </SafeAreaView>
   );
 }
