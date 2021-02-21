@@ -2,13 +2,8 @@
 import React, {useState} from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
 import Slider from '@react-native-community/slider';
-import Geocode from "react-geocode";
 
 import styles from './styles';
-
-// api key for geolocations: AIzaSyCX3tnZh3CzM1jDM7MQST5GAqkhfiGvJmc
-// Geocode.setApiKey("AIzaSyCX3tnZh3CzM1jDM7MQST5GAqkhfiGvJmc");
-// Geocode.setLocationType("ROOFTOP");
 
 const Location = () => {
 
