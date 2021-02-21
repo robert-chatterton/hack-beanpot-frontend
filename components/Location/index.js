@@ -32,9 +32,7 @@ const Location = () => {
                 minimumValue={1}
                 maximumValue={250}
                 value={sliderValue}
-                onValueChange={
-                    (sliderValue) => setSliderValue(sliderValue)
-                }
+                onValueChange={(sliderValue) => setSliderValue(sliderValue)}
                 minimumTrackTintColor="#DFB37D"
                 maximumTrackTintColor="#3B452D"
                 thumbTintColor="#A62F24"
@@ -43,6 +41,7 @@ const Location = () => {
             <Text style={styles.sliderCount}>
                 {sliderValue} miles away
             </Text>
+
         </View>
     );
 };
