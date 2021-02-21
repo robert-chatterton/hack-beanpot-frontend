@@ -26,7 +26,7 @@ const Location = () => {
             </Text>
             <TextInput style={styles.textReader}
                 defaultValue={text}
-                placeholder="Enter address here"
+                placeholder="Enter address here (ex: 11 Green St, Twinleaf Town, AK 12345)"
                 onChangeText={text => setText(text)}
             />
 
