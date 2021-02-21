@@ -3,14 +3,21 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-      padding: 30,
-      width: '60%',
-      marginTop: 10,
-      backgroundColor: '#d9f9b1',
+      paddingLeft: 200,
+      paddingRight: 200,
+      paddingTop: 60,
+      paddingBottom: 60,
+      borderColor: "#DFB37D",
+      borderWidth: 3,
+      marginTop: 15,
+      backgroundColor: '#A62F24',
+      borderRadius: 10,
       alignItems: 'center',
     },
     text: {
-      color: '#4f603c'
+      color: '#DFB37D',
+      fontSize: 25,
+      fontWeight: 600
     },
 });
 

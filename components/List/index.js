@@ -22,7 +22,7 @@ class List extends Component {
       {
         id:3,
         name: 'Hooplah'
-      }
+      },
     ]
   }
   alertItemName = (item) => {
